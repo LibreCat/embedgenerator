@@ -1,4 +1,19 @@
 This repository contains the Librecat embed generator
 facilities
 
-dkdkdk
+This contains
+
+bup_sru.pl
+
+The perl script which realizes the UNIBI PUB frontend, using
+the PUB SRU interface.
+
+The func parameter embed calls the embedding generator
+which is located in the 
+template file
+
+bup_embed_js.tmpl
+
+This file contains the html and javascript code for
+the embedding form and the preview functionality.
+
