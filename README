@@ -17,3 +17,41 @@ bup_embed_js.tmpl
 This file contains the html and javascript code for
 the embedding form and the preview functionality.
 
+===
+
+Introduction
+
+UNIBI has developped a HTTP interface for SBCAT to support a more comfortable
+
+access to the SBCAT functionality, especially for institutional activities
+
+It is based on the SBCAT SRU interface and allows
+
+    easy search syntax (supporting search form usage)
+    Toolkit Templating including (using a down-sized metadata format)
+    Sub-Templating for different institutional views
+    Snippet generator
+
+The script bup_sru.pl is based on CGI, is located in the sbcat cgi directory and has to
+
+be activated in the Apache Server configuration (e.g. as script bup).
+
+It uses the SBCAT SRU interface to search queries, analyses the MODS responses, transfers
+
+that into a templating orientated variable structure, calls the CSL engine to produce
+
+bibliographic citations and displays the results.
+
+The internal functions are:
+
+    display search mask
+    search
+    display front-page (single record)
+    display publishing list (of authors, departments, projects)
+    embed (display generator form)
+
+To produce more efficient long publishing list (with thousands of entries) UNIBI
+
+has developped an alternative strategy based on ORMSOO calls to the
+
+SBCAT database and caching the template structure to speed the creation of these lists. 
